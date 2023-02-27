@@ -19,22 +19,23 @@
     <header class="bg-primary bg-gradient text-end pe-5 text-light">
         <h1>Weather Dashboard</h1>
     </header>
-    <main class="row ms-2">
-        <section class="col-2">
-            <nav class="d-grid gap-2">
+    <main class="row">
+        <section id="searchData" class="col-md-4">
+            <nav>
                 <h2>Search for a City:</h2>
-                <form>
-                    <input type="text" class="form-control" />
+                <form id="citySearchForm" class="d-grid gap-2">
+                    <input type="text" class="form-control-lg" id="searchValue" name="city" />
+                    <button id="searchBtn" class="btn btn-primary">Search</button>
                 </form>
-                <button class="btn btn-primary">Search</button>
+
                 <hr />
             </nav>
         </section>
-        <section class="col-9">
+        <section class="col">
             <section class="border border-secondary" id="weatherToday">
                 <h2 id="todayWeatherCity"></h2>Today's weather
             </section>
-            <section class="row" id="weather5Day">
+            <section class="col" id="weather5Day">
                 <h3>5-Day Forecast</h3>
             </section>
         </section>
