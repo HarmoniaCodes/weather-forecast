@@ -19,9 +19,9 @@
     <header class="bg-primary bg-gradient text-end pe-5 text-light">
         <h1>Weather Dashboard</h1>
     </header>
-    <main class="row">
-        <section id="searchData" class="col-md-4">
-            <nav>
+    <main class="d-flex flex-column flex-md-row justify-content-center gap-2">
+        <section id="searchData" class="d-flex flex-column">
+            <nav class="d-flex flex-column">
                 <h2>Search for a City:</h2>
                 <form id="citySearchForm" class="d-grid gap-2">
                     <input type="text" class="form-control-lg" id="searchValue" name="city" />
@@ -31,12 +31,13 @@
                 <hr />
             </nav>
         </section>
-        <section class="col">
-            <section class="border border-secondary" id="weatherToday">
-                <h2 id="todayWeatherCity"></h2>Today's weather
+        <section class="col-md-5" id="weatherForecast">
+            <section class="card" id="weatherToday">
+                <h2 id="todayWeatherCity" class="card-title">Welcome! Search for a city to get a weather forecast.</h2>
+                <section id="todayWeatherConditions">test</section>
             </section>
             <section class="col" id="weather5Day">
-                <h3>5-Day Forecast</h3>
+                <h3></h3>
             </section>
         </section>
     </main>
