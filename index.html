@@ -19,7 +19,7 @@
     <header class="bg-primary bg-gradient text-end pe-5 text-light">
         <h1>Weather Dashboard</h1>
     </header>
-    <main class="d-flex flex-column flex-md-row justify-content-center gap-2">
+    <main class="d-flex flex-column flex-md-row justify-content-center gap-4">
         <section id="searchData" class="d-flex flex-column">
             <nav class="d-flex flex-column">
                 <h2>Search for a City:</h2>
@@ -31,12 +31,16 @@
                 <hr />
             </nav>
         </section>
-        <section class="col-md-5" id="weatherForecast">
+        <section class="col-md-7" id="weatherForecast">
             <section class="card" id="weatherToday">
                 <h2 id="todayWeatherCity" class="card-title">Welcome! Search for a city to get a weather forecast.</h2>
-                <section id="todayWeatherConditions">test</section>
+                <section class="card-body" id="todayWeatherConditions">
+                    <p class="fs-3 fw-light" id="todayTemp"></p>
+                    <p class="fs-3 fw-light" id="todayWind"></p>
+                    <p class="fs-3 fw-light" id="todayHumid"></p>
+                </section>
             </section>
-            <section class="col" id="weather5Day">
+            <section class="d-lg-flex flex-wrap d-grid gap-2 mt-2 justify-content-center" id="weather5Day">
                 <h3></h3>
             </section>
         </section>
