@@ -36,6 +36,20 @@ function setTodayWeather(data) {
     todayTemp.append("Currently: " + Math.round(data.list[0].main.temp) + "°F");
     todayWind.append("Wind: " + data.list[0].wind.speed + "mph");
     todayHumid.append("Humidity: " + data.list[0].main.humidity + "%");
+    // append emoji for matching weather codes
+    if (data.list[i].weather[0].id >= 200 && data.list[i].weather[0].id < 300) {
+        todayTemp.append("⛈️");
+    } else if (data.list[0].weather[0].id >= 300 && data.list[i].weather[0].id < 600) {
+        todayTemp.append("🌧️");
+    } else if (data.list[0].weather[0].id >= 600 && data.list[i].weather[0].id < 700) {
+        todayTemp.append("❄️");
+    } else if (data.list[0].weather[0].id >= 700 && data.list[i].weather[0].id < 800) {
+        todayTemp.append("⚠️" + data.list[i].weather[0].main);
+    } else if (data.list[0].weather[0].id = 800) {
+        todayTemp.append("☀️");
+    } else {
+        todayTemp.append("🌤");
+    }
 }
 // set the forecast weather
 function setWeather(data) {
@@ -64,12 +78,20 @@ function setWeather(data) {
         tempSpan.textContent = Math.round(data.list[i].main.temp) + "°F";
         windSpan.textContent = "Wind: " + data.list[i].wind.speed + "mph";
         humidSpan.textContent = "Humidity: " + data.list[i].main.humidity + "%";
-
-        if (data.list[i].weather[0].main == "Rain") {
+        // add icons for 5-day forecast
+        if (data.list[i].weather[0].id >= 200 && data.list[i].weather[0].id < 300) {
+            tempSpan.append("⛈️");
+        } else if (data.list[i].weather[0].id >= 300 && data.list[i].weather[0].id < 600) {
             tempSpan.append("🌧️");
-        } else if (data.list[i].weather[0].main == "Clouds") {
-            tempSpan.append("☁️");
-        } else { tempSpan.append("☀️"); }
+        } else if (data.list[i].weather[0].id >= 600 && data.list[i].weather[0].id < 700) {
+            tempSpan.append("❄️");
+        } else if (data.list[i].weather[0].id >= 700 && data.list[i].weather[0].id < 800) {
+            tempSpan.append("⚠️" + data.list[i].weather[0].main);
+        } else if (data.list[i].weather[0].id = 800) {
+            tempSpan.append("☀️");
+        } else {
+            tempSpan.append("🌤");
+        }
     }
     console.log(data);
     // set the background colors according to weather type
