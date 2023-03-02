@@ -18,7 +18,7 @@ citySearchForm.addEventListener("submit", function (event) {
     saveCity(searchedCity);
     console.log("button made");
 })
-const apiKey = ""
+const apiKey = "56692a9d35cd485fed9b361a2d900dde"
 
 // get weather data from openweathermap API
 async function getWeather(searchedCity) {
