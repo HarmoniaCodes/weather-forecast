@@ -37,13 +37,13 @@ function setTodayWeather(data) {
     todayWind.append("Wind: " + data.list[0].wind.speed + "mph");
     todayHumid.append("Humidity: " + data.list[0].main.humidity + "%");
     // append emoji for matching weather codes
-    if (data.list[i].weather[0].id >= 200 && data.list[i].weather[0].id < 300) {
+    if (data.list[0].weather[0].id >= 200 && data.list[0].weather[0].id < 300) {
         todayTemp.append("⛈️");
-    } else if (data.list[0].weather[0].id >= 300 && data.list[i].weather[0].id < 600) {
+    } else if (data.list[0].weather[0].id >= 300 && data.list[0].weather[0].id < 600) {
         todayTemp.append("🌧️");
-    } else if (data.list[0].weather[0].id >= 600 && data.list[i].weather[0].id < 700) {
+    } else if (data.list[0].weather[0].id >= 600 && data.list[0].weather[0].id < 700) {
         todayTemp.append("❄️");
-    } else if (data.list[0].weather[0].id >= 700 && data.list[i].weather[0].id < 800) {
+    } else if (data.list[0].weather[0].id >= 700 && data.list[0].weather[0].id < 800) {
         todayTemp.append("⚠️" + data.list[i].weather[0].main);
     } else if (data.list[0].weather[0].id = 800) {
         todayTemp.append("☀️");
